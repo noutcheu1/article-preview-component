@@ -1,0 +1,302 @@
+
+* {
+
+    color: var(--primary-light-grey);
+    font-family: Overpass, sans-serif;
+    line-height: 20px;
+    font-size: 13px;
+}
+
+
+:root {
+    --very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --desaturated-dark-blue: hsl(214, 17%, 51%);
+    --grayish-blue: hsl(212, 23%, 69%);
+    --light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+/*layout for desktop device*/
+
+body {
+    display: flex;
+    background-color: var(--grayish-blue);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container {
+    width: 736px;
+    height: 293px;
+    /*margin-left: 200px;*/
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px !important;
+    background-color: var(--light-grayish-blue);
+    border-radius: 10px !important;
+}
+
+.row {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: flex-start;
+
+}
+
+.col-md-4 {
+    display: flex;
+    width: 289px;
+    height: 100%;
+
+
+}
+
+.col-md-8 {
+    width: 452px;
+    margin-left: 17px;
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+/*article preview image*/
+
+.img_card {
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 10px !important;
+    border-bottom-left-radius: 10px !important;
+}
+
+
+/* article desciption */
+p {
+    font-size: 13px;
+    margin: 10px 25px 14px 25px;
+    color: var(--desaturated-dark-blue);
+
+}
+
+
+article {
+    width: 100%;
+    height: 279px;
+
+}
+
+.description {
+    width: 100%;
+
+}
+
+.description h1 {
+    font-size: 16px;
+    font-weight: 700;
+    font-family: Manrope, Serif, sans-serif;
+    margin: 10px 0 10px 25px;
+    line-height: 1.5rem;
+    color: var(--very-dark-grayish-blue);
+}
+
+aside {
+    width: 379px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 17px;
+}
+
+/*article auhtor infromation*/
+.profile {
+    display: flex;
+    justify-content: center;
+}
+
+.profile img {
+    height: 50px;
+    width: 50px;
+    border-radius: 120px;
+}
+
+/* social media share */
+.share {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--desaturated-dark-blue);
+    background-color: hsla(212, 23%, 69%, 0.4);
+    margin-top: 12px;
+    height: 33px;
+    width: 33px;
+    border-radius: 35px;
+
+}
+
+.share:hover {
+    background-color: var(--very-dark-grayish-blue);
+    color: var(--light-grayish-blue);
+}
+
+.icon_share {
+    z-index: 2;
+    background-color: var(--very-dark-grayish-blue);
+    position: absolute;
+    border-radius: 10px;
+    top: -55px;
+    left: -78px;
+    width: 260px;
+    height: 56px;
+}
+
+.icon_share_zone {
+    position: relative;
+}
+
+.icon_share:after {
+    content: '';
+    position: absolute;
+    left: 87px;
+    top: 55px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid var(--very-dark-grayish-blue);
+    clear: both;
+}
+
+
+.icon_share p {
+    color: hsla(210, 46%, 95%, 0.5);
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.sub_share {
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+
+}
+
+#icon_share_zone {
+    background-color: transparent;
+}
+
+#icon_share {
+    display: none;
+}
+
+/* for small device and mobile phone */
+
+@media only screen and (max-width: 900px) {
+    /*layout for mobile device*/
+    .container {
+        width: 370px;
+        height: 100%;
+        /*margin-left: 200px;*/
+        display: flex;
+        align-content: center;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 100px !important;
+        background-color: var(--light-grayish-blue);
+        border-radius: 10px !important;
+    }
+
+    .row {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: flex-start;
+
+    }
+
+    .col-md-4 {
+        display: flex;
+        width: 100%;
+        height: 100%;
+
+    }
+
+    .col-md-8 {
+        width: 100%;
+        display: flex;
+        margin-left: 0;
+        padding-top: 27px;
+        flex-direction: column;
+    }
+
+    .profile img {
+        margin-left: -14px;
+    }
+
+    .share {
+
+        margin-left: -37px;
+    }
+
+    aside {
+        position: relative;
+    }
+
+    .icon_share_zone {
+        background-color: var(--very-dark-grayish-blue);
+        position: absolute;
+        width: 372px;
+        height: 100%;
+        left: -1px;
+        top: 17px;
+        z-index: 1;
+        /*display: none;*/
+        border-bottom-left-radius: 14px;
+        border-bottom-right-radius: 14px;
+    }
+
+    .icon_share {
+        position: absolute;
+        border-radius: 10px;
+        top: 16px;
+        left: 4px;
+        width: 242px;
+        height: 56px;
+    }
+
+    .share {
+        position: absolute;
+        top: 16px;
+        left: 343px;
+        justify-content: center;
+        align-items: center;
+        color: var(--desaturated-dark-blue);
+        background-color: hsla(212, 23%, 69%, 0.4);
+        margin-top: 12px;
+        height: 33px;
+        width: 33px;
+        border-radius: 35px;
+    }
+
+    p {
+        text-align: left;
+        /*font-size: 9px;*/
+    }
+
+    .share:hover, .active {
+        color: var(--light-grayish-blue);
+        background-color: hsla(212, 23%, 69%, 0.4);
+    }
+
+    /*.profile {*/
+    /*    margin-left: -117px;*/
+    /*}*/
+}
